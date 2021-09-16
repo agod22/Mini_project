@@ -1,0 +1,199 @@
+<MyGrid>:
+
+	name: name
+	age: age
+	sex: sex
+	cpt: cpt
+	rbp: rbp
+	chol: chol
+	fbs: fbs
+	rer: rer
+	mhr: mhr
+	exia: exia
+	oldpeak: oldpeak
+	slope: slope
+	num: num
+	thal: thal
+
+	FloatLayout:
+		#cols: 1
+		size: root.width, root.height
+		pos: 0, 0
+
+		GridLayout:
+			cols:2
+			size_hint: 1, 0.85
+			pos_hint: {"right": 1,"top": 1}
+
+			Label:
+				text: "Name: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: name
+				multiline: False
+
+			Label:
+				text: "Age: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: age
+				multiline: False
+			#change to bool
+			Label:
+				text: "Sex(M/F): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: sex
+				multiline: False
+
+			Label:
+				text: "Chest pain type (0 - normal, 1 - typical angina, 2 - atypical angina, 3 - non-anginal pain, 4 - asymtomatic): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 16
+
+			TextInput:
+				id: cpt
+				multiline: False
+
+			Label:
+				text: "Resting blood pressure(in mm Hg): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: rbp
+				multiline: False
+
+			Label:
+				text: "Serum cholestoral in mg/dl: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: chol
+				multiline: False
+			#change to bool
+			Label:
+				text: "Fasting blood sugar in mg/dl: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: fbs
+				multiline: False
+				#valign: 'middle'
+				#text_size: self.size
+
+			Label:
+				text: "Resting electrocardiographic results(0 for normal, 1 for having ST-T, and 2 for hypertrophy): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 17
+
+			TextInput:
+				id: rer
+				multiline: False
+
+			Label:
+				text: "Maximum heart rate achieved: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: mhr
+				multiline: False
+			
+			Label:
+				text: "Exercise induced angina(1 for yes, 0 for no): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 17
+
+			TextInput:
+				id: exia
+				multiline: False
+
+			Label:
+				text: "ST depression induced by exercise relative to rest: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 17
+
+			TextInput:
+				id: oldpeak
+				multiline: False
+
+			Label:
+				text: "Slope of the peak exercise ST segment (1 - upsloping, 2 - flat, 3 - downsloping) : "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 17
+
+			TextInput:
+				id: slope
+				multiline: False
+
+			Label:
+				text: "Number of major vessels (0-3) colored by flourosopy: "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 17
+
+			TextInput:
+				id: num
+				multiline: False
+
+			Label:
+				text: "Thalassemia (0 - normal, 6 - fixed defect, 7 - reversable defect): "
+				halign: 'left'
+				valign: 'middle'
+				text_size: self.size
+				font_size: 18
+
+			TextInput:
+				id: thal
+				multiline: False
+
+		Button:
+			size_hint: 0.3, 0.1
+			pos_hint: {"center_x": 0.5,"top": 0.13}
+			text: "Submit"
+			on_press: root.btn()
+
+<P>:
+	Label:
+		text: root.text_var
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	Button:
+		text: "Check again"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
